@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import LibraryView from './LibraryView';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      books: [{ title: 'The Great Adventures', author: 'Marc Zuckerbee', coverUrl: 'https://www.bookcoversclub.com/wp-content/uploads/2018/07/book-cover-354.jpg' },
+      { title: 'The Great Adventures 2', author: 'Marc Zuckerbee', coverUrl: 'https://www.bookcoversclub.com/wp-content/uploads/2018/07/book-cover-354.jpg' }]
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Welcome to our Book Store!</h1>
+
+        <LibraryView books={this.state.books} />
+      </div>
+    );
+  }
+
+
 }
 
 export default App;
