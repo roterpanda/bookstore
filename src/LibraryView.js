@@ -8,7 +8,7 @@ const LibraryView = ({ books }) => {
 
             {
                 books.map((book) => {
-                    return <Card title={book.title} />
+                    return <Card title={book.title} author={book.author} />
                 })
             }
 

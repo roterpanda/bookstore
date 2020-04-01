@@ -1,12 +1,12 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({ title }) => {
+const Card = ({ title, author }) => {
     return (
         <article className='book'>
             <img src="" alt="Book Title" />
             <h2>{title}</h2>
-            <p>Author(s)</p>
+            <p>{author}</p>
         </article>
     )
 }
