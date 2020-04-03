@@ -7,8 +7,8 @@ const LibraryView = ({ books }) => {
         <div className='container'>
 
             {
-                books.map((book) => {
-                    return <Card title={book.title} author={book.author} />
+                books.map((book, i) => {
+                    return <Card title={book.title} author={book.author} key={i} />
                 })
             }
 
